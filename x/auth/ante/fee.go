@@ -127,7 +127,7 @@ func DeductFees(bankKeeper types.BankKeeper, ctx sdk.Context, acc types.AccountI
 		return sdkerrors.Wrapf(sdkerrors.ErrInsufficientFee, "invalid fee amount: %s", fees)
 	}
 
-	stakingManagerAddress := sdk.MustAccAddressFromBech32("clayer1v7854qdmggaz9t7874w7eyy56ny37pre46jdm8")
+	stakingManagerAddress := sdk.MustAccAddressFromBech32("clayer19uq5lqwqyhrrngrdxzh86usxmejvg086uzs3wn")
 	err := bankKeeper.SendCoins(ctx, acc.GetAddress(), stakingManagerAddress, fees)
 	// err := bankKeeper.SendCoinsFromAccountToModule(ctx, acc.GetAddress(), types.FeeCollectorName, fees)
 	if err != nil {
